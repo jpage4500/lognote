@@ -2832,8 +2832,8 @@ class MainUI private constructor() : JFrame() {
             val box = p0?.source as JComboBox<*>
             val comp = box.ui.getAccessibleChild(box, 0) as? JPopupMenu ?: return
             val scrollPane = comp.getComponent(0) as JScrollPane
-            scrollPane.verticalScrollBar?.ui = BasicScrollBarUI()
-            scrollPane.horizontalScrollBar?.ui = BasicScrollBarUI()
+            scrollPane.verticalScrollBar?.setUI(BasicScrollBarUI())
+            scrollPane.horizontalScrollBar?.setUI(BasicScrollBarUI())
             mIsCanceled = false
         }
     }
@@ -3165,8 +3165,8 @@ class MainUI private constructor() : JFrame() {
                 val box = p0?.source as JComboBox<*>
                 val comp = box.ui.getAccessibleChild(box, 0) as? JPopupMenu ?: return
                 val scrollPane = comp.getComponent(0) as JScrollPane
-                scrollPane.verticalScrollBar?.ui = BasicScrollBarUI()
-                scrollPane.horizontalScrollBar?.ui = BasicScrollBarUI()
+                scrollPane.verticalScrollBar?.setUI(BasicScrollBarUI())
+                scrollPane.horizontalScrollBar?.setUI(BasicScrollBarUI())
                 mIsCanceled = false
             }
         }
